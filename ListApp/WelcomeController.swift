@@ -11,10 +11,8 @@ import UIKit
 class WelcomeController: UIViewController {
     
     let bg: UIView = {
-        let view = UIView()
-        view.backgroundColor = .cyan
+        let view = LAGradient()
         view.layer.cornerRadius = 6
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
@@ -24,14 +22,12 @@ class WelcomeController: UIViewController {
         view.backgroundColor = .white
         
         view.addSubview(bg)
-        
         NSLayoutConstraint.activate([
             bg.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
-            bg.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
-            bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-            bg.topAnchor.constraint(equalTo: view.topAnchor, constant: 20)
+            bg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            bg.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
             ])
-        
     }
 
 }
