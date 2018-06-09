@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+//        for family in UIFont.familyNames.sorted() {
+//            print(family)
+//        }
         
         let wc = WelcomeController()
         
