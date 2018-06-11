@@ -11,6 +11,7 @@ import UIKit
 class LALabel: UILabel {
     
     init(title: String = "Default String", color: UIColor = .white, size: CGFloat = 16, textAlignment: NSTextAlignment = .left, frame: CGRect = .zero) {
+        
         super.init(frame: frame)
         if frame == .zero {
             self.translatesAutoresizingMaskIntoConstraints = false

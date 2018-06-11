@@ -12,7 +12,7 @@ class WelcomeController: UIViewController {
     
     let bg: UIView = {
         let view = LAGradient()
-        view.layer.cornerRadius = 6
+        view.layer.cornerRadius = 24
         return view
     }()
     
@@ -20,6 +20,16 @@ class WelcomeController: UIViewController {
         let label = LALabel(title: "Get It Done", size: 24, textAlignment: .center)
         return label
     }()
+    
+    let infoLabel: UILabel = {
+       let label = LALabel(title: "WELCOME! LISTAPP IS A TO-DO LIST APP.\nITS A REALLY SICK TO-DO LIST.", color: .white, size: 14, textAlignment: .center)
+        label.numberOfLines = 2
+        return label
+    }()
+    
+    let nextButton = LAButton(title: "START WINNING")
+    
+    let copyrightLabel = LALabel(title: "© 2018 | Mason Bose", color: .grayOne, size: 14, textAlignment: .center)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +51,30 @@ class WelcomeController: UIViewController {
             titleLabel.heightAnchor.constraint(equalToConstant: 40),
             titleLabel.centerXAnchor.constraint(equalTo: bg.centerXAnchor),
             titleLabel.topAnchor.constraint(equalTo: bg.topAnchor, constant: 60)
+            ])
+        
+        bg.addSubview(infoLabel)
+        NSLayoutConstraint.activate([
+            infoLabel.centerXAnchor.constraint(equalTo: bg.centerXAnchor),
+            infoLabel.centerYAnchor.constraint(equalTo: bg.centerYAnchor),
+            infoLabel.widthAnchor.constraint(equalToConstant: 300),
+            infoLabel.heightAnchor.constraint(equalToConstant: 40)
+            ])
+        
+        bg.addSubview(nextButton)
+        NSLayoutConstraint.activate([
+            nextButton.widthAnchor.constraint(equalToConstant: 200),
+            nextButton.heightAnchor.constraint(equalToConstant: 40),
+            nextButton.centerXAnchor.constraint(equalTo: bg.centerXAnchor),
+            nextButton.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -60)
+            ])
+        
+        view.addSubview(copyrightLabel)
+        NSLayoutConstraint.activate([
+            copyrightLabel.widthAnchor.constraint(equalToConstant: 200),
+            copyrightLabel.heightAnchor.constraint(equalToConstant: 40),
+            copyrightLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            copyrightLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
             ])
     }
 }
