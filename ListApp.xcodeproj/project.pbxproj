@@ -10,6 +10,7 @@
 		8643E50020CC65D7004E4D22 /* LALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8643E4FF20CC65D7004E4D22 /* LALabel.swift */; };
 		8643E50320CC6B2B004E4D22 /* Raleway-v4020-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8643E50220CC6B2B004E4D22 /* Raleway-v4020-Regular.otf */; };
 		8643E50520CC6CDA004E4D22 /* Raleway-v4020-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8643E50420CC6CDA004E4D22 /* Raleway-v4020-SemiBold.otf */; };
+		8668C9BE20CF5DD9003B32D0 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668C9BD20CF5DD9003B32D0 /* OptionSet.swift */; };
 		866D8ACC20CA15A000FDF853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8ACB20CA15A000FDF853 /* AppDelegate.swift */; };
 		866D8ACE20CA15A000FDF853 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8ACD20CA15A000FDF853 /* WelcomeController.swift */; };
 		866D8AD420CA15A000FDF853 /* ListApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 866D8AD220CA15A000FDF853 /* ListApp.xcdatamodeld */; };
@@ -17,6 +18,9 @@
 		866D8AD920CA15A100FDF853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866D8AD720CA15A100FDF853 /* LaunchScreen.storyboard */; };
 		866D8AE120CA1CC300FDF853 /* LAGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8AE020CA1CC300FDF853 /* LAGradient.swift */; };
 		866D8AE420CA1FF500FDF853 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8AE320CA1FF500FDF853 /* Extensions.swift */; };
+		8695801120D06C6700D92BCC /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695801020D06C6700D92BCC /* Protocol.swift */; };
+		86DE4C8820CED426009B89D3 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DE4C8720CED426009B89D3 /* ListController.swift */; };
+		86DE4C8C20CED588009B89D3 /* LAHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DE4C8B20CED588009B89D3 /* LAHeaderView.swift */; };
 		86F7AC7820CDCEA200669F95 /* LAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7AC7720CDCEA200669F95 /* LAButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +28,7 @@
 		8643E4FF20CC65D7004E4D22 /* LALabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LALabel.swift; sourceTree = "<group>"; };
 		8643E50220CC6B2B004E4D22 /* Raleway-v4020-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-v4020-Regular.otf"; sourceTree = "<group>"; };
 		8643E50420CC6CDA004E4D22 /* Raleway-v4020-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-v4020-SemiBold.otf"; sourceTree = "<group>"; };
+		8668C9BD20CF5DD9003B32D0 /* OptionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSet.swift; sourceTree = "<group>"; };
 		866D8AC820CA15A000FDF853 /* ListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		866D8ACB20CA15A000FDF853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		866D8ACD20CA15A000FDF853 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
@@ -33,6 +38,9 @@
 		866D8ADA20CA15A100FDF853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		866D8AE020CA1CC300FDF853 /* LAGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAGradient.swift; sourceTree = "<group>"; };
 		866D8AE320CA1FF500FDF853 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8695801020D06C6700D92BCC /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		86DE4C8720CED426009B89D3 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		86DE4C8B20CED588009B89D3 /* LAHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAHeaderView.swift; sourceTree = "<group>"; };
 		86F7AC7720CDCEA200669F95 /* LAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +61,7 @@
 				866D8AE020CA1CC300FDF853 /* LAGradient.swift */,
 				8643E4FF20CC65D7004E4D22 /* LALabel.swift */,
 				86F7AC7720CDCEA200669F95 /* LAButton.swift */,
+				86DE4C8B20CED588009B89D3 /* LAHeaderView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -64,6 +73,15 @@
 				8643E50420CC6CDA004E4D22 /* Raleway-v4020-SemiBold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8668C9BC20CEE4AE003B32D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				866D8ACD20CA15A000FDF853 /* WelcomeController.swift */,
+				86DE4C8720CED426009B89D3 /* ListController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		866D8ABF20CA15A000FDF853 = {
@@ -85,11 +103,11 @@
 		866D8ACA20CA15A000FDF853 /* ListApp */ = {
 			isa = PBXGroup;
 			children = (
-				866D8AE220CA1FE800FDF853 /* Extensions */,
-				8643E50120CC6996004E4D22 /* Fonts */,
-				8643E4FC20CC6577004E4D22 /* Custom */,
-				866D8ACD20CA15A000FDF853 /* WelcomeController.swift */,
 				866D8ACB20CA15A000FDF853 /* AppDelegate.swift */,
+				8643E50120CC6996004E4D22 /* Fonts */,
+				866D8AE220CA1FE800FDF853 /* Extensions */,
+				8643E4FC20CC6577004E4D22 /* Custom */,
+				8668C9BC20CEE4AE003B32D0 /* Controllers */,
 				866D8AD520CA15A100FDF853 /* Assets.xcassets */,
 				866D8AD720CA15A100FDF853 /* LaunchScreen.storyboard */,
 				866D8ADA20CA15A100FDF853 /* Info.plist */,
@@ -102,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				866D8AE320CA1FF500FDF853 /* Extensions.swift */,
+				8668C9BD20CF5DD9003B32D0 /* OptionSet.swift */,
+				8695801020D06C6700D92BCC /* Protocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,12 +199,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				86F7AC7820CDCEA200669F95 /* LAButton.swift in Sources */,
+				86DE4C8C20CED588009B89D3 /* LAHeaderView.swift in Sources */,
 				866D8AE420CA1FF500FDF853 /* Extensions.swift in Sources */,
+				8668C9BE20CF5DD9003B32D0 /* OptionSet.swift in Sources */,
 				866D8AD420CA15A000FDF853 /* ListApp.xcdatamodeld in Sources */,
 				866D8ACE20CA15A000FDF853 /* WelcomeController.swift in Sources */,
+				8695801120D06C6700D92BCC /* Protocol.swift in Sources */,
 				8643E50020CC65D7004E4D22 /* LALabel.swift in Sources */,
 				866D8AE120CA1CC300FDF853 /* LAGradient.swift in Sources */,
 				866D8ACC20CA15A000FDF853 /* AppDelegate.swift in Sources */,
+				86DE4C8820CED426009B89D3 /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

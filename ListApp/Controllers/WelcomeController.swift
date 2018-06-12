@@ -27,12 +27,26 @@ class WelcomeController: UIViewController {
         return label
     }()
     
-    let nextButton = LAButton(title: "START WINNING")
+    let nextButton = LAButton(title: "START WINNING", type: .roundedText)
     
     let copyrightLabel = LALabel(title: "© 2018 | Mason Bose", color: .grayOne, size: 14, textAlignment: .center)
+    
+    @objc func handleNextButton() {
+        UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.nextButton.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        }) { (_) in
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+                self.nextButton.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }) { (_) in
+                self.present(ListController(), animated: true, completion: nil)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nextButton.addTarget(self, action: #selector(self.handleNextButton), for: .touchUpInside)
         
         view.backgroundColor = .white
         
