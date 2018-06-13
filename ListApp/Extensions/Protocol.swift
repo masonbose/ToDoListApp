@@ -9,7 +9,11 @@
 import UIKit
 
 protocol LAHeaderDelegate {
-    func addItem()
+    func openAddItemPopup()
+}
+
+protocol LANewItemDelegate {
+    func addItemToList(text: String)
 }
 
 

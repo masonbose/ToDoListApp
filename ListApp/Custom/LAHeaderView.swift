@@ -69,7 +69,7 @@ class LAHeaderView: UIView {
     @objc func handleAddButton() {
         //have to unwrap because var is optional
         if let delegate = self.delegate {
-            delegate.addItem()
+            delegate.openAddItemPopup()
         }
     }
     

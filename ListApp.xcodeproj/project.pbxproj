@@ -19,6 +19,8 @@
 		866D8AE120CA1CC300FDF853 /* LAGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8AE020CA1CC300FDF853 /* LAGradient.swift */; };
 		866D8AE420CA1FF500FDF853 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8AE320CA1FF500FDF853 /* Extensions.swift */; };
 		8695801120D06C6700D92BCC /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695801020D06C6700D92BCC /* Protocol.swift */; };
+		8695801320D06FF100D92BCC /* LANewItemPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695801220D06FF100D92BCC /* LANewItemPopup.swift */; };
+		8695801520D0AC2E00D92BCC /* LATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695801420D0AC2E00D92BCC /* LATextField.swift */; };
 		86DE4C8820CED426009B89D3 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DE4C8720CED426009B89D3 /* ListController.swift */; };
 		86DE4C8C20CED588009B89D3 /* LAHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DE4C8B20CED588009B89D3 /* LAHeaderView.swift */; };
 		86F7AC7820CDCEA200669F95 /* LAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7AC7720CDCEA200669F95 /* LAButton.swift */; };
@@ -39,6 +41,8 @@
 		866D8AE020CA1CC300FDF853 /* LAGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAGradient.swift; sourceTree = "<group>"; };
 		866D8AE320CA1FF500FDF853 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8695801020D06C6700D92BCC /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		8695801220D06FF100D92BCC /* LANewItemPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LANewItemPopup.swift; sourceTree = "<group>"; };
+		8695801420D0AC2E00D92BCC /* LATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LATextField.swift; sourceTree = "<group>"; };
 		86DE4C8720CED426009B89D3 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		86DE4C8B20CED588009B89D3 /* LAHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAHeaderView.swift; sourceTree = "<group>"; };
 		86F7AC7720CDCEA200669F95 /* LAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAButton.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				8643E4FF20CC65D7004E4D22 /* LALabel.swift */,
 				86F7AC7720CDCEA200669F95 /* LAButton.swift */,
 				86DE4C8B20CED588009B89D3 /* LAHeaderView.swift */,
+				8695801220D06FF100D92BCC /* LANewItemPopup.swift */,
+				8695801420D0AC2E00D92BCC /* LATextField.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -204,10 +210,12 @@
 				8668C9BE20CF5DD9003B32D0 /* OptionSet.swift in Sources */,
 				866D8AD420CA15A000FDF853 /* ListApp.xcdatamodeld in Sources */,
 				866D8ACE20CA15A000FDF853 /* WelcomeController.swift in Sources */,
+				8695801320D06FF100D92BCC /* LANewItemPopup.swift in Sources */,
 				8695801120D06C6700D92BCC /* Protocol.swift in Sources */,
 				8643E50020CC65D7004E4D22 /* LALabel.swift in Sources */,
 				866D8AE120CA1CC300FDF853 /* LAGradient.swift in Sources */,
 				866D8ACC20CA15A000FDF853 /* AppDelegate.swift in Sources */,
+				8695801520D0AC2E00D92BCC /* LATextField.swift in Sources */,
 				86DE4C8820CED426009B89D3 /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

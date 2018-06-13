@@ -15,10 +15,12 @@ class LAGradient: UIView {
         UIColor.blueOne.cgColor
     ]
     
-    override init(frame: CGRect) {
+    override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         
-        self.translatesAutoresizingMaskIntoConstraints = false
+        if frame == .zero {
+            self.translatesAutoresizingMaskIntoConstraints = false
+        }
         
         if let layer = self.layer as? CAGradientLayer {
             layer.colors = self.hexColors
