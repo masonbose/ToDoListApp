@@ -10,6 +10,7 @@
 		8643E50020CC65D7004E4D22 /* LALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8643E4FF20CC65D7004E4D22 /* LALabel.swift */; };
 		8643E50320CC6B2B004E4D22 /* Raleway-v4020-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8643E50220CC6B2B004E4D22 /* Raleway-v4020-Regular.otf */; };
 		8643E50520CC6CDA004E4D22 /* Raleway-v4020-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8643E50420CC6CDA004E4D22 /* Raleway-v4020-SemiBold.otf */; };
+		864AE10220D89AF7000EE774 /* LACheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864AE10120D89AF7000EE774 /* LACheckBox.swift */; };
 		8668C9BE20CF5DD9003B32D0 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668C9BD20CF5DD9003B32D0 /* OptionSet.swift */; };
 		866D8ACC20CA15A000FDF853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8ACB20CA15A000FDF853 /* AppDelegate.swift */; };
 		866D8ACE20CA15A000FDF853 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8ACD20CA15A000FDF853 /* WelcomeController.swift */; };
@@ -21,6 +22,9 @@
 		8695801120D06C6700D92BCC /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695801020D06C6700D92BCC /* Protocol.swift */; };
 		8695801320D06FF100D92BCC /* LANewItemPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695801220D06FF100D92BCC /* LANewItemPopup.swift */; };
 		8695801520D0AC2E00D92BCC /* LATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8695801420D0AC2E00D92BCC /* LATextField.swift */; };
+		86AA928A20D75CC8007B6E65 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AA928920D75CC8007B6E65 /* ToDo.swift */; };
+		86CF7D5A20D741A90021B523 /* LAListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CF7D5920D741A90021B523 /* LAListCell.swift */; };
+		86D1C77020D185910096CD89 /* LATableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1C76F20D185910096CD89 /* LATableView.swift */; };
 		86DE4C8820CED426009B89D3 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DE4C8720CED426009B89D3 /* ListController.swift */; };
 		86DE4C8C20CED588009B89D3 /* LAHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DE4C8B20CED588009B89D3 /* LAHeaderView.swift */; };
 		86F7AC7820CDCEA200669F95 /* LAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7AC7720CDCEA200669F95 /* LAButton.swift */; };
@@ -30,6 +34,7 @@
 		8643E4FF20CC65D7004E4D22 /* LALabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LALabel.swift; sourceTree = "<group>"; };
 		8643E50220CC6B2B004E4D22 /* Raleway-v4020-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-v4020-Regular.otf"; sourceTree = "<group>"; };
 		8643E50420CC6CDA004E4D22 /* Raleway-v4020-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-v4020-SemiBold.otf"; sourceTree = "<group>"; };
+		864AE10120D89AF7000EE774 /* LACheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LACheckBox.swift; sourceTree = "<group>"; };
 		8668C9BD20CF5DD9003B32D0 /* OptionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSet.swift; sourceTree = "<group>"; };
 		866D8AC820CA15A000FDF853 /* ListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		866D8ACB20CA15A000FDF853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +48,9 @@
 		8695801020D06C6700D92BCC /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		8695801220D06FF100D92BCC /* LANewItemPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LANewItemPopup.swift; sourceTree = "<group>"; };
 		8695801420D0AC2E00D92BCC /* LATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LATextField.swift; sourceTree = "<group>"; };
+		86AA928920D75CC8007B6E65 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		86CF7D5920D741A90021B523 /* LAListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAListCell.swift; sourceTree = "<group>"; };
+		86D1C76F20D185910096CD89 /* LATableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LATableView.swift; sourceTree = "<group>"; };
 		86DE4C8720CED426009B89D3 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		86DE4C8B20CED588009B89D3 /* LAHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAHeaderView.swift; sourceTree = "<group>"; };
 		86F7AC7720CDCEA200669F95 /* LAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAButton.swift; sourceTree = "<group>"; };
@@ -68,6 +76,9 @@
 				86DE4C8B20CED588009B89D3 /* LAHeaderView.swift */,
 				8695801220D06FF100D92BCC /* LANewItemPopup.swift */,
 				8695801420D0AC2E00D92BCC /* LATextField.swift */,
+				86D1C76F20D185910096CD89 /* LATableView.swift */,
+				86CF7D5920D741A90021B523 /* LAListCell.swift */,
+				864AE10120D89AF7000EE774 /* LACheckBox.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -112,6 +123,7 @@
 				866D8ACB20CA15A000FDF853 /* AppDelegate.swift */,
 				8643E50120CC6996004E4D22 /* Fonts */,
 				866D8AE220CA1FE800FDF853 /* Extensions */,
+				86AA928620D75C85007B6E65 /* Model */,
 				8643E4FC20CC6577004E4D22 /* Custom */,
 				8668C9BC20CEE4AE003B32D0 /* Controllers */,
 				866D8AD520CA15A100FDF853 /* Assets.xcassets */,
@@ -130,6 +142,14 @@
 				8695801020D06C6700D92BCC /* Protocol.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		86AA928620D75C85007B6E65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				86AA928920D75CC8007B6E65 /* ToDo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +234,11 @@
 				8695801120D06C6700D92BCC /* Protocol.swift in Sources */,
 				8643E50020CC65D7004E4D22 /* LALabel.swift in Sources */,
 				866D8AE120CA1CC300FDF853 /* LAGradient.swift in Sources */,
+				86D1C77020D185910096CD89 /* LATableView.swift in Sources */,
+				86AA928A20D75CC8007B6E65 /* ToDo.swift in Sources */,
+				864AE10220D89AF7000EE774 /* LACheckBox.swift in Sources */,
 				866D8ACC20CA15A000FDF853 /* AppDelegate.swift in Sources */,
+				86CF7D5A20D741A90021B523 /* LAListCell.swift in Sources */,
 				8695801520D0AC2E00D92BCC /* LATextField.swift in Sources */,
 				86DE4C8820CED426009B89D3 /* ListController.swift in Sources */,
 			);

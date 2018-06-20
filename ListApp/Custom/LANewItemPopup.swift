@@ -31,7 +31,7 @@ class LANewItemPopup: LAGradient {
         
         let inset: CGFloat = 12
         
-        self.layer.cornerRadius = 14
+        self.layer.cornerRadius = 16
         
         addSubview(cancel)
         NSLayoutConstraint.activate([
