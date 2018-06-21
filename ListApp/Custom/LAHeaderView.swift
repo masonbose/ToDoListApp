@@ -13,7 +13,7 @@ class LAHeaderView: UIView {
     let bg = LAGradient()
     let titleLabel = LALabel(size: 14)
     let subtitleLabel = LALabel(size: 24)
-    let addButton = LAButton(title: "+", type: .squareIcon)
+    let addButton = LAButton(type: .squareIcon)
     var delegate: LAHeaderDelegate?
     
     init(frame: CGRect = .zero, title: String = "Header Title", subtitle: String = "Header Subtitle ") {

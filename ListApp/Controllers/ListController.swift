@@ -51,8 +51,8 @@ class ListController: UIViewController, LAHeaderDelegate, LANewItemDelegate {
         
         listData = [
             ToDo(id: 0, title: "first item", status: false),
-            ToDo(id: 1, title: "hey dude", status: false),
-            ToDo(id: 2, title: "this is fun", status: false)
+            ToDo(id: 1, title: "hey dude", status: true),
+            ToDo(id: 2, title: "this is fun", status: true)
         ]
         
         view.backgroundColor = .white
@@ -110,15 +110,73 @@ extension ListController: UITextFieldDelegate {
     }
 }
 
-extension ListController: UITableViewDelegate, UITableViewDataSource {
+extension ListController: UITableViewDelegate, UITableViewDataSource, LAListCellDelegate {
+    
+    func toggleToDo(id: Int, status: Bool) {
+        let newListData = self.listData.map { (toDo) -> ToDo in
+            if toDo.id == id {
+                var newToDo = toDo
+                newToDo.status = status
+                return newToDo
+            }
+            return toDo
+        }
+        self.listData = newListData
+        self.listTable.reloadData()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "To Do"
+        }
+        return "Done"
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let titleForHeaderInSection = LALabel(color: .white, size: 20, frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 44))
+        
+        if section == 0 {
+            titleForHeaderInSection.text = "To Do"
+        } else {
+            titleForHeaderInSection.text = "Done"
+        }
+        return titleForHeaderInSection
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 38
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listData.count
+        var count = 0
+        self.listData.forEach { (toDo) in
+            if section == 0 && !toDo.status { //if toDo.status == false
+                count += 1
+            } else if section == 1 && toDo.status {
+                count += 1
+            }
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! LAListCell
-        cell.toDo = self.listData[indexPath.row]
+        cell.box.delegate = self
+        
+        var itemsForSection: [ToDo] = []
+        self.listData.forEach { (toDo) in
+            if indexPath.section == 0 && !toDo.status { //if toDo.status == false
+                itemsForSection.append(toDo)
+            } else if indexPath.section == 1 && toDo.status {
+                itemsForSection.append(toDo)
+            }
+        }
+        
+        cell.toDo = itemsForSection[indexPath.row]
         return cell
     }
     

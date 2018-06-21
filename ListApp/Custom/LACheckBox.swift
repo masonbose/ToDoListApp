@@ -10,15 +10,30 @@ import UIKit
 
 class LACheckBox: UIButton {
     
+    var delegate: LAListCellDelegate?
+    var id: Int?
+    
     var toggled: Bool? {
         didSet {
             if let toggled = toggled {
-                if toggled {
-                    backgroundColor = .green
-                } else {
-                    backgroundColor = .clear
+                UIView.animate(withDuration: 0.2) {
+                    if toggled {
+                        self.backgroundColor = .green
+                        self.setImage(UIImage(named: "done-icon"), for: .normal)
+                    } else {
+                        self.backgroundColor = .clear
+                        self.setImage(UIImage(), for: .normal)
+                    }
                 }
             }
+        }
+    }
+    
+    @objc func toggleStatus() {
+        //toggled = !toggled
+        if let status = toggled, let delegate = self.delegate, let id = self.id {
+            toggled = !status
+            delegate.toggleToDo(id: id, status: !status)
         }
     }
     
@@ -28,6 +43,8 @@ class LACheckBox: UIButton {
         
         layer.borderWidth = 1
         layer.borderColor = UIColor.grayZero.cgColor
+        
+        addTarget(self, action: #selector(self.toggleStatus), for: .touchUpInside)
     }
     
     required init?(coder aDecoder: NSCoder) {
