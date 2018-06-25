@@ -29,6 +29,12 @@ class LAHeaderView: UIView {
         
     }
     
+    var itemsLeft: Int = 0 {
+        didSet {
+            self.subtitleLabel.text = "\(itemsLeft) Left"
+        }
+    }
+    
     func setupLayout() {
        
         addSubview(bg)
@@ -44,21 +50,21 @@ class LAHeaderView: UIView {
         
         NSLayoutConstraint.activate([
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 12),
-            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 28), //28 lines up with bg view
+            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 36), //28 lines up with bg view
             titleLabel.rightAnchor.constraint(equalTo: centerXAnchor), //label box just extends towards middle of header
             //automatically takes height property from font size above
             ])
         
         NSLayoutConstraint.activate([
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
-            subtitleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 28),
+            subtitleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 36),
             subtitleLabel.rightAnchor.constraint(equalTo: centerXAnchor, constant: 50)
             ])
         
         addSubview(addButton)
         NSLayoutConstraint.activate([
             addButton.bottomAnchor.constraint(equalTo: subtitleLabel.bottomAnchor),
-            addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -28),
+            addButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -20 - 16 - 14),
             addButton.heightAnchor.constraint(equalToConstant: 24),
             addButton.widthAnchor.constraint(equalTo: addButton.heightAnchor, multiplier: 1)
             ])

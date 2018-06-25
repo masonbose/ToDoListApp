@@ -17,6 +17,6 @@ protocol LANewItemDelegate {
 }
 
 protocol LAListCellDelegate {
-    func toggleToDo(id: Int, status: Bool)
+    func toggleTodo(toDo: ToDo)
 }
 

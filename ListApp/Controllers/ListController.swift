@@ -1,3 +1,4 @@
+
 //
 //  ListController.swift
 //  ListApp
@@ -33,7 +34,7 @@ class ListController: UIViewController, LAHeaderDelegate, LANewItemDelegate {
     let CELL_ID = "cell_id"
     var listData: [ToDo] = [ToDo]()
     
-   
+    
     
     var keyboardHeight: CGFloat = 333 //have to get default value since it starts off at 0
     
@@ -45,7 +46,16 @@ class ListController: UIViewController, LAHeaderDelegate, LANewItemDelegate {
         let keyboardSize = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
         self.keyboardHeight = keyboardSize.height
     }
-
+    
+    func updateHeaderItemsLeft() {
+        header.itemsLeft = 0
+        self.listData.forEach { (toDo) in
+            if !toDo.status {
+                header.itemsLeft += 1
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,8 +65,10 @@ class ListController: UIViewController, LAHeaderDelegate, LANewItemDelegate {
             ToDo(id: 2, title: "this is fun", status: true)
         ]
         
+        self.updateHeaderItemsLeft()
+        
         view.backgroundColor = .white
-    
+        
         view.addSubview(header)
         NSLayoutConstraint.activate([
             header.topAnchor.constraint(equalTo: view.topAnchor),
@@ -98,9 +110,14 @@ class ListController: UIViewController, LAHeaderDelegate, LANewItemDelegate {
         listTable.dataSource = self
         listTable.register(LAListCell.self, forCellReuseIdentifier: CELL_ID)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension ListController: UITextFieldDelegate {
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         popup.animateView(transform: CGAffineTransform(translationX: 0, y: -keyboardHeight), duration: 0.5)
     }
@@ -111,18 +128,20 @@ extension ListController: UITextFieldDelegate {
 }
 
 extension ListController: UITableViewDelegate, UITableViewDataSource, LAListCellDelegate {
-    
-    func toggleToDo(id: Int, status: Bool) {
-        let newListData = self.listData.map { (toDo) -> ToDo in
-            if toDo.id == id {
-                var newToDo = toDo
-                newToDo.status = status
+  
+    func toggleTodo(toDo updatedToDo: ToDo) {
+        let newListData = self.listData.map { (oldToDo) -> ToDo in
+            if oldToDo.id == updatedToDo.id {
+                var newToDo = oldToDo
+                newToDo.status = updatedToDo.status
+                newToDo.title = updatedToDo.title
                 return newToDo
             }
-            return toDo
+            return oldToDo
         }
         self.listData = newListData
         self.listTable.reloadData()
+        self.updateHeaderItemsLeft()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -165,7 +184,7 @@ extension ListController: UITableViewDelegate, UITableViewDataSource, LAListCell
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! LAListCell
-        cell.box.delegate = self
+        cell.delegate = self
         
         var itemsForSection: [ToDo] = []
         self.listData.forEach { (toDo) in
